@@ -1,0 +1,32 @@
+(deftheme SintassiC
+  "Created 2017-09-25.")
+
+(custom-theme-set-faces
+ 'SintassiC
+ '(error ((t (:foreground "deep pink" :weight bold))))
+ '(font-lock-builtin-face ((t (:foreground "green"))))
+ '(font-lock-comment-face ((t nil)))
+ '(font-lock-constant-face ((t (:foreground "dodger blue"))))
+ '(font-lock-doc-face ((t (:foreground "indian red"))))
+ '(font-lock-function-name-face ((t nil)))
+ '(font-lock-keyword-face ((t (:foreground "green"))))
+ '(font-lock-preprocessor-face ((t (:foreground "blue" :weight bold))))
+ '(font-lock-string-face ((t (:foreground "light salmon"))))
+ '(font-lock-type-face ((t (:foreground "cyan"))))
+ '(font-lock-variable-name-face ((t nil)))
+ '(font-lock-warning-face ((t (:foreground "hot pink" :weight bold))))
+ '(header-line ((t (:inverse-video t :box (:line-width -1 :color "red" :style released-button)))))
+ '(highlight ((t (:background "sea green"))))
+ '(menu ((t (:background "gray30" :foreground "gray70"))))
+ '(minibuffer-prompt ((t (:foreground "cyan"))))
+ '(mode-line ((t (:background "gray30" :box (:line-width 1 :color "red") :family "DejaVu Sans"))))
+ '(mode-line-inactive ((t (:inherit mode-line :foreground "dark gray"))))
+ '(region ((t (:background "blue"))))
+ '(scroll-bar ((t (:background "gray20" :foreground "dark turquoise"))))
+ '(secondary-selection ((t (:background "#333366" :foreground "#f6f3e8"))))
+ '(show-paren-match ((t (:background "DeepSkyBlue4"))))
+ '(show-paren-mismatch ((t (:background "dark magenta"))))
+ '(widget-field ((t (:box (:line-width 2 :color "grey75" :style pressed-button)))))
+ '(default ((t (:background "gray20" :foreground "white smoke")))))
+
+(provide-theme 'SintassiC)
