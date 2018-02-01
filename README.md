@@ -7,16 +7,12 @@ This is my personal configuration directory of emacs
 *      go to next caracter like ...
 *      compile c program in /tmp
 *      execute c program in working directory /tmp
-*      C-Ret o vim command
-*      M-Ret O vim command
-
-## Inutilizzati
-
-* C-m
-* M-RET
 
 ## Custom Keystrokes:
 
+* M-o			o vim command
+* C-o			O vim command
+* M-RET			newline but the cursor remain at his position (old standard emacs keystroke C-o)
 * M-x save-macro	save a macro in init.el
 * M-x i	                add if structure at your c code
 * M-x ie                add if..else structure at your c code

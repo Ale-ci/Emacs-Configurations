@@ -4,8 +4,6 @@
 ;; Rimappo Alt come Meta
 (setq x-alt-keysym 'meta)
 
-
-
 ;; Configurazione tema SintassiC
 (custom-set-variables
  '(custom-enabled-themes (quote (SintassiC)))
@@ -14,10 +12,6 @@
     ("f5839c3063cf75d706bdea19826de7642a56381fcce2145d27fafb10420f528c" "5fccaf1cd74474f68d9475aef3f82690f3db2d488d43bb76ebb81c6223a69965" default))))
 (custom-set-faces
  )
-
-
-
-
 
 ;; Aggiungo macro "main"
 (fset 'main
@@ -35,20 +29,22 @@
 (fset 'w
    (lambda (&optional arg) "Keyboard macro." (interactive "p") (kmacro-exec-ring-item (quote ("while(){}" 0 "%d")) arg)))
 
-;; Aggiungo macro "Ovim"
-(fset 'Ovim
-   (lambda (&optional arg) "Keyboard macro." (interactive "p") (kmacro-exec-ring-item (quote ("" 0 "%d")) arg)))
-
 ;; Aggiungo macro "ovim"
 (fset 'ovim
+   (lambda (&optional arg) "Keyboard macro." (interactive "p") (kmacro-exec-ring-item (quote ("" 0 "%d")) arg)))
+
+;; Aggiungo macro "Ovim"
+(fset 'Ovim
    (lambda (&optional arg) "Keyboard macro." (interactive "p") (kmacro-exec-ring-item (quote ("" 0 "%d")) arg)))
 
-
-
-
 ;; Creo scorciatoia tastiera per Ovim
-;; (define-key global-map [C-m] 'ovim)    ;; NON Funziona!!
+(global-set-key (kbd "M-o") 'Ovim)
 
+;; Creo scorciatoia tastiera per ovim
+(global-set-key (kbd "C-o") 'ovim)
+
+;; Creo scorciatoia tastiera per open-line (ex C-o)
+(global-set-key (kbd "M-RET") 'open-line)
 
 ;; Creo funzione per salvare le macro
 (defun save-macro (name)
@@ -65,3 +61,7 @@
 
 
 ;; Configurazioni aggiunte da Emacs da ordinare
+
+
+
+
