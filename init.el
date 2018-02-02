@@ -22,7 +22,11 @@
 ;;========================================
 ;;CUSTOM MACROS
 ;;========================================
-    
+
+;; Add "ide" macro
+(fset 'ide
+   (lambda (&optional arg) "Keyboard macro." (interactive "p") (kmacro-exec-ring-item (quote ("3220{5xshrei	xshellobco	" 0 "%d")) arg)))
+
 ;; Add "save-macro" macro
 (defun save-macro (name)
   "Save a macro. Take a name as argument and save the last defined macro unde this name at the end of your init.el"
@@ -82,14 +86,20 @@
 ;;KEYSTROKES
 ;;========================================
 
-;; Creo scorciatoia tastiera per Ovim
+;; Ovim
 (global-set-key (kbd "M-o") 'Ovim)
 
-;; Creo scorciatoia tastiera per ovim
+;; ovim
 (global-set-key (kbd "C-o") 'ovim)
 
-;; Creo scorciatoia tastiera per open-line (ex C-o)
+;; open-line (ex standard C-o)
 (global-set-key (kbd "M-RET") 'open-line)
+
+;; compile
+(global-set-key (kbd "C-c c") 'compile)
+
+;; recompile
+(global-set-key (kbd "C-c r") 'recompile)
 
 
 
@@ -97,9 +107,4 @@
 ;;NOT ORDERED CONFIGURATION
 ;;========================================
 
-
-
-
-(fset 'ide
-   (lambda (&optional arg) "Keyboard macro." (interactive "p") (kmacro-exec-ring-item (quote ("3220{5xshrei	xshellobco	" 0 "%d")) arg)))
 
