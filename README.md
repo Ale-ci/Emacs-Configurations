@@ -71,8 +71,9 @@ This is my personal configuration directory of emacs
 * C-x 2 		create a new window under the selected one
 * C-x 3			create a new window near the selected one
 
-* C-x s			save all
-* C-x C-s	     	save file
+* C-x k			kill a buffer
+* C-x s			save all buffers
+* C-x C-s	     	save current buffer
 
 * C-z 			suspend emacs, recover session with fg or %emacs
 

@@ -1,10 +1,14 @@
-;; Elimino file di beckup
+;;========================================
+;;BASIC CONFIGURATIONS
+;;========================================
+
+;; Remove beckup file
 (setq make-backup-files nil)
 
-;; Rimappo Alt come Meta
+;; Rebind Alt as Meta
 (setq x-alt-keysym 'meta)
 
-;; Configurazione tema SintassiC
+;; Configuration "SintassiC" teme
 (custom-set-variables
  '(custom-enabled-themes (quote (SintassiC)))
  '(custom-safe-themes
@@ -13,29 +17,70 @@
 (custom-set-faces
  )
 
-;; Aggiungo macro "main"
+
+
+;;========================================
+;;CUSTOM MACROS
+;;========================================
+    
+;; Add "save-macro" macro
+(defun save-macro (name)
+  "Save a macro. Take a name as argument and save the last defined macro unde this name at the end of your init.el"
+  (interactive "SName of the macro: ")
+  (kmacro-name-last-macro name)
+  (find-file user-init-file)
+  (goto-char (point-max))
+  (newline)
+  (insert-kbd-macro name)
+  (newline)
+;;autosaving and quit buffer
+  (save-buffer)
+  (kill-buffer))
+;;if you prefer to check the modified file before saving
+;;  (switch-to-buffer nil))
+
+;; Add "main" macro
 (fset 'main
    (lambda (&optional arg) "Keyboard macro." (interactive "p") (kmacro-exec-ring-item (quote ("#include <stdio.h>int main() {return 0;}	" 0 "%d")) arg)))
 
-;; Aggiungo macro "i"
+;; Add "i" macro
 (fset 'i
    (lambda (&optional arg) "Keyboard macro." (interactive "p") (kmacro-exec-ring-item (quote ("if(){}" 0 "%d")) arg)))
 
-;; Aggiungo macro "ie"
+;; Add "ie" macro
 (fset 'ie
    (lambda (&optional arg) "Keyboard macro." (interactive "p") (kmacro-exec-ring-item (quote ("if(){}else{?}" 0 "%d")) arg)))
 
-;; Aggiungo macro "w"
+;; Add "w" macro
 (fset 'w
    (lambda (&optional arg) "Keyboard macro." (interactive "p") (kmacro-exec-ring-item (quote ("while(){}" 0 "%d")) arg)))
 
-;; Aggiungo macro "ovim"
+;; Add "ovim" macro
 (fset 'ovim
    (lambda (&optional arg) "Keyboard macro." (interactive "p") (kmacro-exec-ring-item (quote ("" 0 "%d")) arg)))
 
-;; Aggiungo macro "Ovim"
+;; Add "Ovim" macro
 (fset 'Ovim
-   (lambda (&optional arg) "Keyboard macro." (interactive "p") (kmacro-exec-ring-item (quote ("" 0 "%d")) arg)))
+      (lambda (&optional arg) "Keyboard macro." (interactive "p") (kmacro-exec-ring-item (quote ("" 0 "%d")) arg)))
+
+
+;;========================================
+;;COMMENTED
+;;========================================
+
+;; Add "ide" macro
+;;(defun ide ()
+;;  "Divide screen in three parts, one for shell, one for source code, one for compiler buffer"
+;;  (split-window-right)
+;;  (shrink-window-horizontally 20)
+;;  (split-window-below)
+;;  (shrink-window 7)
+;;  (shell))
+;;ERROR: not a keyboard macro.
+
+;;========================================
+;;KEYSTROKES
+;;========================================
 
 ;; Creo scorciatoia tastiera per Ovim
 (global-set-key (kbd "M-o") 'Ovim)
@@ -46,22 +91,15 @@
 ;; Creo scorciatoia tastiera per open-line (ex C-o)
 (global-set-key (kbd "M-RET") 'open-line)
 
-;; Creo funzione per salvare le macro
-(defun save-macro (name)
-  "Save a macro. Take a name as argument and save the last defined macro unde this name at the end of your init.el"
-  (interactive "SName of the macro: ")
-  (kmacro-name-last-macro name)
-  (find-file user-init-file)
-  (goto-char (point-max))
-  (newline)
-  (insert-kbd-macro name)
-  (newline)
-  (switch-to-buffer nil))
-;;aggiungere autosalvataggio
 
 
-;; Configurazioni aggiunte da Emacs da ordinare
+;;========================================
+;;NOT ORDERED CONFIGURATION
+;;========================================
 
 
 
+
+(fset 'ide
+   (lambda (&optional arg) "Keyboard macro." (interactive "p") (kmacro-exec-ring-item (quote ("3220{5xshrei	xshellobco	" 0 "%d")) arg)))
 
