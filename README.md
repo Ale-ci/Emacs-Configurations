@@ -5,8 +5,8 @@ This is my personal configuration directory of emacs
 ## Keystrokes uknown:
 
 *      go to next caracter like ...
-*      compile c program in /tmp
-*      execute c program in working directory /tmp
+*      defaut compilation gcc
+*      execute c program (in working directory /tmp)
 
 ## Custom Keystrokes:
 
@@ -17,6 +17,9 @@ This is my personal configuration directory of emacs
 * M-x i	                add if structure at your c code
 * M-x ie                add if..else structure at your c code
 * M-x main              add main structure to begin your c code
+* M-x ide		divide screen in three parts: source code, shell and copilation buffer (if already compiled)
+* C-c c			compile
+* C-c r			recompile
 
 ## Standard Keystrokes:
 
