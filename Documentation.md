@@ -4,13 +4,13 @@ This is my personal configuration directory of emacs
 
 ## Keystrokes uknown or to do:
 
-*      comment this line at the beginning 
 *      go to next caracter like ...
 *      defaut compilation gcc
 *      execute c program (in working directory /tmp)
 
 ## Custom Keystrokes:
 
+* C-c C-c		comment this line at the beginning 
 * M-o			o vim command
 * C-o			O vim command
 * M-RET			newline but the cursor remain at his position (old standard emacs keystroke C-o)
@@ -54,6 +54,7 @@ This is my personal configuration directory of emacs
 * M-c			uppercase the caracter and go at the end of the word
 
 * C-space		set a mark
+* C-u C-space		go to mark
 * M-h			select the paragraph
 * C-w			cut selected area between pointer and mark
 * M-w 			copy selected area between pointer and mark
