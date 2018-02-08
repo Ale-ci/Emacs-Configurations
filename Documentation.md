@@ -1,9 +1,10 @@
-# Emacs-Configurations
+# Emacs-Configurations Documentation
 
 This is my personal configuration directory of emacs
 
-## Keystrokes uknown:
+## Keystrokes uknown or to do:
 
+*      comment this line at the beginning 
 *      go to next caracter like ...
 *      defaut compilation gcc
 *      execute c program (in working directory /tmp)
