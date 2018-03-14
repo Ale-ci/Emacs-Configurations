@@ -7,10 +7,16 @@ This is my personal configuration directory of emacs
 *      go to next caracter like ...
 *      defaut compilation gcc
 *      execute c program (in working directory /tmp)
+*      uncomment this line at the beginning
+*      indent this paragraph
+*      move current line up (like C-x C-t)
+*      move current line down
+*      move current word forward
+*      move current word backward
 
 ## Custom Keystrokes:
 
-* C-c C-c		comment this line at the beginning 
+* C-c C-c		comment this line at the beginning (not workink as i wish)
 * M-o			o vim command
 * C-o			O vim command
 * M-RET			newline but the cursor remain at his position (old standard emacs keystroke C-o)
